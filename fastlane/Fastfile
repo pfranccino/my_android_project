@@ -25,7 +25,7 @@ platform:android do
 
     firebase_app_distribution(
       app: "app_id",
-      firebase_cli_token: "token_firebase"
+      firebase_cli_token: "1//0hFdjUFHVGZ27CgYIARAAGBESNwF-L9IrJNSkIYj6CEdRsMq1rDwM3XBnJL6H9yFqnlsUiz6jdYZTn9d8nKzmbCo4IA1k5QM0pA8"
   )
 
   end
