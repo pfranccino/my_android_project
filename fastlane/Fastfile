@@ -24,9 +24,9 @@ platform:android do
       build_type: 'Debug')
 
     firebase_app_distribution(
-      app: "app_id",
-      firebase_cli_token: "1//0hFdjUFHVGZ27CgYIARAAGBESNwF-L9IrJNSkIYj6CEdRsMq1rDwM3XBnJL6H9yFqnlsUiz6jdYZTn9d8nKzmbCo4IA1k5QM0pA8"
-  )
-
+      app: "1:49986261071:android:7d69196e510744fd13da3a",
+      apk_path: "./app/build/outputs/apk/debug/app-debug.apk",
+      firebase_cli_token: "1//0h5B86DF8rV8lCgYIARAAGBESNwF-L9IrRFmWwTbTCJGUvZ3Ipigrr9j9oP58126JI47QEq0K-2FT7wXGGZqq7AMp4EGx_ZVY-cw",
+      debug: true)
   end
 end
