@@ -15,10 +15,6 @@ jobs:
       - name: CheckData
         uses: actions/checkout@v2.1.0
 
-      - name: Ruby Setup
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
       - name: Gradle cache
         uses: actions/cache@v3
         with:
