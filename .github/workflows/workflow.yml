@@ -1,16 +1,12 @@
-name: First deploy with github actions
 
-on:
-  push:
-    branches:
-      - main
+on: push
+name: First workflow with github actions
 
 jobs:
   my_android_job:
     runs-on: ubuntu-18.04 # Works also with self hosted runner supporting docker
     container:
       image: docker://pfranccino027/android-cd-pfranccino
-
-  steps:
-    - name: Fastlane
-      run: bundle exec fastlane test
+    steps:
+      - name: Fastlane
+        run: bundle exec fastlane test
