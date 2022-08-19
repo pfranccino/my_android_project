@@ -9,7 +9,7 @@ jobs:
   my_android_job:
     runs-on: ubuntu-18.04 # Works also with self hosted runner supporting docker
     container:
-      image: docker://pfranccino027/android-cd-pfranccino
+      image: docker://pfranccino027/android-cd-pfranccino:0.0.2
 
     steps:
       - name: CheckData
