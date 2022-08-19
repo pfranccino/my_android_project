@@ -24,6 +24,7 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-
+      - name: Install fastlane
+        run: bundle install fastlane
       - name: Fastlane
         run: bundle exec fastlane test
