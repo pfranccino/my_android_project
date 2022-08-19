@@ -25,6 +25,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
       - name: Install fastlane
-        run: bundle install fastlane
+        run: bundle install
       - name: Fastlane
         run: bundle exec fastlane test
