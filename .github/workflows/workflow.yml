@@ -1,12 +1,36 @@
+name: First deploy with github actions
 
-on: push
-name: First workflow with github actions
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   my_android_job:
     runs-on: ubuntu-18.04 # Works also with self hosted runner supporting docker
     container:
       image: docker://pfranccino027/android-cd-pfranccino
+
     steps:
+      - name: CheckData
+        uses: actions/checkout@v2.1.0
+
+      - name: Ruby Setup
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+        env:
+          ImageOS: ubuntu20
+
+      - name: Gradle cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            /root/.gradle/caches
+            /root/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
       - name: Fastlane
         run: bundle exec fastlane test
