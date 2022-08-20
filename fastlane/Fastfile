@@ -21,7 +21,7 @@ platform:android do
 
     gradle(
       task: 'assemble',
-      build_type: 'Debug')
+      build_type: 'Release')
 
     firebase_app_distribution(
       app: "1:49986261071:android:7d69196e510744fd13da3a",
